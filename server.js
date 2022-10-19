@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const stripe = require("stripe")(process.env.REACT_APP_STRIPE_PK);
+const stripe = require("stripe")(`${process.env.REACT_APP_STRIPE_PK}`);
 
 const app = express();
 app.use(cors());
